@@ -82,8 +82,8 @@ kubectl exec -n todoapp deployment/todoapp -- cat /app/secrets/SECRET_KEY
 Verify that the PersistentVolumeClaim is bound to the PersistentVolume:
 
 ```bash
-kubectl get pv todoapp-pv
-kubectl get pvc todoapp-pvc -n todoapp
+kubectl get pv pv-data
+kubectl get pvc pvc-data -n todoapp
 ```
 
 Verify that the storage volume is mounted inside the container at `/app/data`:
